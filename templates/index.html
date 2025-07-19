@@ -8,74 +8,75 @@
    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 
-   body {
-    font-family: 'Times New Roman', Times, serif;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background: linear-gradient(135deg, #ffe6f0, #f9e2ff); /* sweet pink-white */
-    color: #4b0082;
+    background: linear-gradient(135deg, #e0f7ff, #f0faff); /* soft sky-blue gradient */
+    color: #003366;
     margin: 0;
     padding: 2rem;
     animation: fadeIn 1s ease-in-out;
 }
 
- h1 {
-    font-family: 'Times New Roman', Times, serif;
+h1 {
+    font-family: 'Georgia', serif;
     font-size: 3.2rem;
-    color: #c71585;
-    text-shadow: 2px 2px #fbd0ff;
+    color: #0066cc;
+    text-shadow: 2px 2px #d4f0ff;
     animation: popIn 0.8s ease forwards;
 }
 
-    .mood-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.2rem;
-        margin-top: 2rem;
-    }
+.mood-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
 
-    .mood-button {
-        background: linear-gradient(145deg, #ffd6ec, #dcd2ff);
-        border: 2px solid #f8e1ff;
-        padding: 1rem 1.7rem;
-        border-radius: 20px;
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #6a0dad;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 6px 14px rgba(153, 102, 255, 0.25);
-    }
+.mood-button {
+    background: linear-gradient(145deg, #d0eaff, #e6f4ff);
+    border: 2px solid #b3daff;
+    padding: 1rem 1.7rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #004c99;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 14px rgba(0, 123, 255, 0.25);
+}
 
-    .mood-button:hover {
-        transform: scale(1.08) rotate(-1deg);
-        background: linear-gradient(145deg, #f5d3f5, #e5ddff);
-        box-shadow: 0 8px 20px rgba(186, 85, 211, 0.35);
-    }
+.mood-button:hover {
+    transform: scale(1.08) rotate(-1deg);
+    background: linear-gradient(145deg, #cceeff, #e0f5ff);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.35);
+}
 
-    .mood-box {
-        background: #fff9ff;
-        border-radius: 16px;
-        box-shadow: 0 8px 24px rgba(138, 43, 226, 0.12);
-        margin-top: 3rem;
-        padding: 2rem 2.5rem;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        animation: slideUp 0.8s ease forwards;
-    }
+.mood-box {
+    background: #f9fdff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.12);
+    margin-top: 3rem;
+    padding: 2rem 2.5rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: slideUp 0.8s ease forwards;
+}
 
-    a {
-        color: #ba55d3;
-        font-weight: bold;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+a {
+    color: #007acc;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-    a:hover {
-        color: #9932cc;
-        text-decoration: underline;
-    }
+a:hover {
+    color: #004b8d;
+    text-decoration: underline;
+}
+
 
     /* Animations */
     @keyframes fadeIn {
