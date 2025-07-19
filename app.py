@@ -41,7 +41,7 @@ mood_data = {
     "excited": {
         "msg": "Your energy is electric! Let it flow freely, chase those dreams, and light up every room you walk into. You're unstoppable. ⚡🎉",
         "tip": "Dance it out with this happy burst of rhythm:",
-        "playlist": "https://open.spotify.com/playlist/37i9dQZF1DX1tW4VlEfDSS"
+        "playlist": "https://open.spotify.com/playlist/3xpurMdBVp9jKPSE6ILX11 S"
     },
     "hopeless": {
         "msg": "Even the darkest nights give way to sunrise. There is hope woven into tomorrow, waiting just beyond the fog. Hold on. ☀️🫶",
@@ -56,7 +56,7 @@ mood_data = {
     "motivated": {
         "msg": "You're fired up, and the universe can feel it. Let your passion blaze trails. You’ve got this. Keep going. 🚀💥",
         "tip": "Fuel your fire with this fierce playlist:",
-        "playlist": "https://open.spotify.com/playlist/37i9dQZF1DX76Wlfdnj7AP"
+        "playlist": "https://open.spotify.com/playlist/1o9PLAwea826FJonsAYDQu "
     },
     "hopeful": {
         "msg": "The best chapters of your story are still being written. Keep your chin up, your heart open — magic is near. 🌈📖",
@@ -66,7 +66,7 @@ mood_data = {
     "angry": {
         "msg": "Anger is valid. Let it pass like a storm — loud, powerful, but always temporary. Choose to release, not suppress. You’re in control. 🔥🌧️",
         "tip": "Here's a playlist to help you release it all:",
-        "playlist": "https://open.spotify.com/playlist/37i9dQZF1DWZ6KLSZ9uD1x"
+        "playlist": "https://open.spotify.com/playlist/1xdEaBisiJRDotBWbQGmnd"
     },
     "insecure": {
         "msg": "You are enough. Not when you achieve more. Not when you fix yourself. But right now, as you are. Beautiful and whole. 💕🪞",
@@ -76,7 +76,7 @@ mood_data = {
     "bored": {
         "msg": "Boredom is your imagination knocking. Explore, create, or wander freely — the world is full of possibilities. 🎈✨",
         "tip": "Run wild through new sounds and rhythms:",
-        "playlist": "https://open.spotify.com/playlist/37i9dQZF1DWZIQpJDq3p8w"
+        "playlist": "https://open.spotify.com/playlist/1QbJym8B3Xb6rpXdk7MBiJ"
     },
     "creative": {
         "msg": "The spark is alive in you. Paint, write, build — let your ideas break free and dance into the world. 🎨💡",
