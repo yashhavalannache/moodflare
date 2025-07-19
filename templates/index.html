@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoodFlare</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet');
+
+   body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ffe6f0, #f9e2ff); /* sweet pink-white */
+    color: #4b0082;
+    margin: 0;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+ h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3.2rem;
+    color: #c71585;
+    text-shadow: 2px 2px #fbd0ff;
+    animation: popIn 0.8s ease forwards;
+}
+
+    .mood-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
+        margin-top: 2rem;
+    }
+
+    .mood-button {
+        background: linear-gradient(145deg, #ffd6ec, #dcd2ff);
+        border: 2px solid #f8e1ff;
+        padding: 1rem 1.7rem;
+        border-radius: 20px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #6a0dad;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 14px rgba(153, 102, 255, 0.25);
+    }
+
+    .mood-button:hover {
+        transform: scale(1.08) rotate(-1deg);
+        background: linear-gradient(145deg, #f5d3f5, #e5ddff);
+        box-shadow: 0 8px 20px rgba(186, 85, 211, 0.35);
+    }
+
+    .mood-box {
+        background: #fff9ff;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(138, 43, 226, 0.12);
+        margin-top: 3rem;
+        padding: 2rem 2.5rem;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        animation: slideUp 0.8s ease forwards;
+    }
+
+    a {
+        color: #ba55d3;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #9932cc;
+        text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.98); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+    }
+
+
+    @keyframes popIn {
+        0% { transform: scale(0.8); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+</style>
+
+</head>
+<body>
+    <h1>MoodFlare</h1>
+
+    {% if not context %}
+        <p>How are you feeling?</p>
+        <form method="POST">
+            <div class="mood-grid">
+                {% for mood in [
+                    ("happy", "😄"), ("sad", "😢"), ("stressed", "😡"), ("tired", "😴"),
+                    ("angry", "😠"), ("excited", "🤩"), ("anxious", "😰"), ("calm", "😌"),
+                    ("bored", "🥱"), ("confused", "😕"), ("motivated", "🏃‍♂️"), ("inspired", "💡"),
+                    ("grateful", "🙏"), ("lonely", "😔"), ("hopeful", "🌈"), ("relaxed", "🧘‍♀️"),
+                    ("romantic", "💖"), ("energetic", "⚡"), ("melancholy", "🎭")
+                ] %}
+                    <button class="mood-button" type="submit" name="mood" value="{{ mood[0] }}">{{ mood[1] }} {{ mood[0].capitalize() }}</button>
+                {% endfor %}
+            </div>
+        </form>
+    {% else %}
+        <div class="mood-box">
+            <h2>Your Mood: {{ request.form['mood'].capitalize() }}</h2>
+            <p>{{ context.msg }}</p>
+            <p><em>{{ context.tip }}</em></p>
+            <a href="{{ context.playlist }}" target="_blank">Spotify 🎶</a>
+        </div>
+
+        <form method="GET">
+            <button class="mood-button" type="submit">🔁 Pick Another Mood</button>
+        </form>
+    {% endif %}
+</body>
+</html>
