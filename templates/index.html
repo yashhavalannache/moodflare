@@ -146,9 +146,9 @@
             <h2>Your Mood: {{ request.form['mood'].capitalize() }}</h2>
             <p>{{ context.msg }}</p>
             <p><em>{{ context.tip }}</em></p>
-            <a href="{{ context.playlist }}" target="_blank">Spotify 🎶</a>
+            <a href="{{ context.playlist }}" target="_blank" class="mood-link">🎧 Listen on Spotify</a>
         </div>
-
+        
         <form method="GET">
             <button class="mood-button" type="submit">🔁 Pick Another Mood</button>
         </form>
